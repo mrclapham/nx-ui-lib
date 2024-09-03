@@ -1,0 +1,9 @@
+{
+  "name": "vanilla-fe",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/vanilla-fe",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project vanilla-fe --web",
+  "targets": {}
+}
