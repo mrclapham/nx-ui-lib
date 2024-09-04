@@ -2,9 +2,12 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "tw": "npx tailwindcss -i ./libs/src/input.css -o ./libs/src/output.css --config=libs/tailwind.config.js --watch"
+  },
   "private": true,
   "dependencies": {
+    "@fontsource/source-sans-pro": "^5.0.8",
     "next": "14.2.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -30,6 +33,7 @@
     "@storybook/addon-interactions": "^8.2.8",
     "@storybook/core-server": "^8.2.8",
     "@storybook/jest": "^0.2.3",
+    "@storybook/react": "^8.2.9",
     "@storybook/react-vite": "^8.2.8",
     "@storybook/test-runner": "^0.13.0",
     "@storybook/testing-library": "^0.2.2",
@@ -62,7 +66,7 @@
     "postcss": "8.4.38",
     "prettier": "^2.6.2",
     "storybook": "^8.2.8",
-    "tailwindcss": "3.4.3",
+    "tailwindcss": "^3.4.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.5.2",

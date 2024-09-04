@@ -1,10 +1,6 @@
 const plugin = require('tailwindcss/plugin');
-const defaultTheme = require('../tailwindConfig/tailwind.plugin.dark.config');
 
 module.exports = plugin(function ({ addComponents }) {
-  addComponents(
-    defaultTheme
-    );
   addComponents({
     '.btn': {
       padding: '.5rem 1rem',
@@ -14,6 +10,7 @@ module.exports = plugin(function ({ addComponents }) {
     '.btn-blue': {
       backgroundColor: '#3490dc',
       color: '#fff',
+      padding: '.5rem 1rem',
       '&:hover': {
         backgroundColor: '#2779bd'
       },

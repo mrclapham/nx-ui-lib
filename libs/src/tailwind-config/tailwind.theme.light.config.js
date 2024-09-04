@@ -1,5 +1,5 @@
-/* Auto generated on 2024-07-23T14:33:57.419Z – do not edit */ 
-        export default {
+/* Auto generated on 2024-07-23T14:33:57.419Z – do not edit */
+  export default {
   "colors": {
     "Primary": {
       "10": "#e86c001a",
