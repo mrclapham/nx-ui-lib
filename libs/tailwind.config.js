@@ -1,16 +1,3 @@
-// import base from './src/tailwind-config/tailwind.base.config';
-// import plugins from './src/tailwind-config/theme-plugin';
-import theme from './src/tailwind-config/tailwind.theme.light.config';
-
-// export default {
-//   ...base,
-//   plugins: [
-//     plugins
-//   ],
-//   theme
-// }
-
-
 module.exports = {
   content: [
     "./libs/**/*.{js,ts,jsx,tsx}",

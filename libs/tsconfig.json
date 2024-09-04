@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "allowJs": false,
-    "esModuleInterop": false,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "types": ["vite/client"]

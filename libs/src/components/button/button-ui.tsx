@@ -6,5 +6,3 @@ export const ButtonUi = () => {
     </div>
   );
 }
-
-export default ButtonUi;
