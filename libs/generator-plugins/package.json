@@ -1,0 +1,19 @@
+{
+  "name": "generator-plugins",
+  "version": "0.0.1",
+  "dependencies": {
+    "@nx/devkit": "19.5.7",
+    "tslib": "^2.3.0",
+    "factory.ts": "1.4.1",
+    "react": "18.2.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true,
+  "generators": "./generators.json",
+  "lintFilePatterns": [
+    "libs/generator-plugins/**/*.{ts,tsx,js,jsx}",
+    "!libs/generator-plugins/src/generators/ui-component-generator/files/**/*"
+  ]
+}

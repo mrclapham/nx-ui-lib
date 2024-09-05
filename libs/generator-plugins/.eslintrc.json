@@ -1,0 +1,55 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": [
+    "!**/*",
+    "**/src/generators/ui-component-generator/files/*template*.*",
+    "**/src/generators/ui-component-generator/files/**/*template*.*"
+  ],
+  "overrides": [
+      {
+        "files": ["**/*template*.tsx"],
+        "rules": {
+          "@typescript-eslint/ban-ts-comment": "off"
+        }
+      },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/dependency-checks": "error"
+      }
+    },
+    {
+      "files": ["./package.json", "./generators.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/nx-plugin-checks": "error"
+      }
+    },
+    {
+      "files": [
+        "**/src/generators/ui-component-generator/files/*template*.*",
+        "**/src/generators/ui-component-generator/files/**/*template*.*"
+      ],
+      "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-undef": "off",
+        "@typescript-eslint/no-undef": "off",
+        "your-custom-rule-name": "off"
+      }
+    }
+  ]
+}

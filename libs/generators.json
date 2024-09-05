@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "ui-lib": {
+      "factory": "./uigen/generator",
+      "schema": "./uigen/schema.json",
+      "description": "Creates UI components"
+    }
+  }
+}

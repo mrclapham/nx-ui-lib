@@ -8,5 +8,9 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
+  },
+  "generators": "./generators.json",
+  "dependencies": {
+    "@nx/devkit": "19.6.5"
   }
 }

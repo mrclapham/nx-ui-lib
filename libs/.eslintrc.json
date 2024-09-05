@@ -12,7 +12,8 @@
             "js": "never",
             "jsx": "never",
             "ts": "never",
-            "tsx": "never"
+            "tsx": "never",
+            "json": "never"
           }
         ]
       }
@@ -24,6 +25,19 @@
     {
       "files": ["*.js", "*.jsx"],
       "rules": {}
+    },
+    {
+      "files": ["./package.json", "./generators.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/nx-plugin-checks": "error"
+      }
+    },
+    {
+      "files": ["**/*template*.*"],
+      "rules": {
+        "your-custom-rule-name": "off"
+      }
     }
   ]
 }
