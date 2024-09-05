@@ -64,6 +64,9 @@
         "testStorybookTargetName": "test-storybook",
         "staticStorybookTargetName": "static-storybook"
       }
+    },
+    {
+      "plugin": "generator-plugins"
     }
   ],
   "targetDefaults": {
@@ -80,6 +83,12 @@
     },
     "@nx/react": {
       "library": {}
+    },
+    "generator-plugins": {
+      "ui-component-generator": {
+        "factory": "./src/generators/ui-component-generator/generator",
+        "schema": "./src/generators/ui-component-generator/schema.json"
+      }
     }
   },
   "ignorePatterns": [

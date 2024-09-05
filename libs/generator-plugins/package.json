@@ -2,10 +2,12 @@
   "name": "generator-plugins",
   "version": "0.0.1",
   "dependencies": {
-    "@nx/devkit": "19.5.7",
+    "@nx/devkit": "19.6.5",
     "tslib": "^2.3.0",
     "factory.ts": "1.4.1",
-    "react": "18.2.0"
+    "react": "18.3.1",
+    "@testing-library/react": "^16.0.1",
+    "@storybook/react": "^8.2.9"
   },
   "type": "commonjs",
   "main": "./src/index.js",
@@ -15,5 +17,21 @@
   "lintFilePatterns": [
     "libs/generator-plugins/**/*.{ts,tsx,js,jsx}",
     "!libs/generator-plugins/src/generators/ui-component-generator/files/**/*"
-  ]
+  ],
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "options": {
+          "outputPath": "dist/libs/generator-plugins",
+          "main": "libs/generator-plugins/src/index.ts",
+          "tsConfig": "libs/generator-plugins/tsconfig.lib.json",
+          "assets": [
+            "libs/generator-plugins/*.md",
+            "libs/generator-plugins/src/generators/*/files/**/*"
+          ]
+        }
+      }
+    }
+  }
 }
