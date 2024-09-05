@@ -44,10 +44,10 @@ export const renameFilesAndDirs = (
   }
 };
 
-export const uiComponentGeneratorGenerator = async (
+export  async function generator(
   tree: Tree,
   options: UiComponentGeneratorGeneratorSchema,
-) => {
+) {
   const componentName = names(options.name).fileName;
   const kebabComponentName = toKebabCase(componentName);
   const camelComponentName = toCamelCase(componentName);

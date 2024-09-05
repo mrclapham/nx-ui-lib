@@ -71,7 +71,7 @@
       "dependsOn": ["^build"]
     }
   },
-  "generators": {
+"generators": {
     "@nx/next": {
       "application": {
         "style": "tailwind",
@@ -80,6 +80,13 @@
     },
     "@nx/react": {
       "library": {}
+    },
+    "generator-plugins": {
+      "ui-component-generator": {
+        "factory": "./libs/generator-plugins/src/generators/ui-component-generator/generator",
+        "schema": "./libs/generator-plugins/src/generators/ui-component-generator/schema.json",
+        "description": "Generate a UI component"
+      }
     }
   },
   "ignorePatterns": [
