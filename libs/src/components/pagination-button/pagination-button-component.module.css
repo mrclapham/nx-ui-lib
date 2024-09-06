@@ -1,7 +1,5 @@
 @import '../../design-tokens/css/tokens.css';
 
-
-
 .pagination-button {
   --button-size: var(--font-size-4);
   --button-padding: var(--sm);

@@ -5,7 +5,6 @@ import { type PaginationButtonProps, HeadingSizes } from '../pagination-button-c
 export const PaginationButtonFactory =
   Factory.Sync.makeFactory<PaginationButtonProps>({
     size: HeadingSizes.LARGE,
-    title: 'The Title',
-    className: 'classname',
     ariaLabel: 'aria-label',
+    value:  1
   });

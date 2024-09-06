@@ -12,16 +12,14 @@ export type HeadingSizesType = (typeof HeadingSizes)[keyof typeof HeadingSizes];
 
 export type PaginationButtonProps = {
   size?: HeadingSizesType;
-  title: string;
-  className?: string;
+  value: number;
   ariaLabel?: string;
 };
 
 export const PaginationButton: FC<PaginationButtonProps> = ({
   size = HeadingSizes.MEDIUM,
-  title,
-  className = 'heading',
   ariaLabel,
+  value = 0,
 }) => {
   const sizeClasses = {
     [HeadingSizes.LARGE]: 'pagination-button--large',
@@ -31,7 +29,7 @@ export const PaginationButton: FC<PaginationButtonProps> = ({
 
   return (
     <div className={ `${styles['pagination-button']} ${styles[sizeClasses[size]]}`} aria-label={ariaLabel || title}>
-      {title} {size}
+      {value}
     </div>
   );
 };

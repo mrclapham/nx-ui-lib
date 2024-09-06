@@ -12,8 +12,7 @@ const meta: Meta<typeof PaginationButton> = {
       control: 'select',
       options: Object.values(HeadingSizes),
     },
-    title: { control: 'text' },
-    className: { control: 'text' },
+    value: { control: 'number' },
     ariaLabel: { control: 'text' },
   },
 };
@@ -24,20 +23,20 @@ type Story = StoryObj<typeof PaginationButton>;
 export const Large: Story = {
   args: PaginationButtonFactory.build({
     size: HeadingSizes.LARGE,
-    title: 'PaginationButton – Large',
+    value: 1,
   }),
 };
 
 export const Medium: Story = {
   args: PaginationButtonFactory.build({
     size: HeadingSizes.MEDIUM,
-    title: 'PaginationButton – Medium',
+    value: 2,
   }),
 };
 
 export const Small: Story = {
   args: PaginationButtonFactory.build({
     size: HeadingSizes.SMALL,
-    title: 'PaginationButton – Small',
+    value: 3,
   }),
 };

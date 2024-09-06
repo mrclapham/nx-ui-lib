@@ -6,34 +6,34 @@ import { PaginationButton } from './pagination-button-component';
 
 describe('PaginationButton Component', () => {
   test('renders with default props', () => {
-    render(<PaginationButton title='Default Heading' />);
+    render(<PaginationButton value={1} />);
     const headingElement = screen.getByText('Default Heading');
     expect(headingElement).toBeInTheDocument();
     expect(headingElement).toHaveClass('text-3xl');
   });
 
   test('renders with custom size', () => {
-    render(<PaginationButton size='large' title='Large Heading' />);
+    render(<PaginationButton size='large' value={2} />);
     const headingElement = screen.getByText('Large Heading');
     expect(headingElement).toHaveClass('text-3xl');
   });
 
   test('applies custom className', () => {
-    render(<PaginationButton title='Custom Class' className='custom-class' />);
+    render(<PaginationButton value={3} />);
     const headingElement = screen.getByText('Custom Class');
     expect(headingElement).toHaveClass('custom-class');
   });
 
   test('sets aria-label attribute when provided', () => {
     render(
-      <PaginationButton title='Aria Label Test' ariaLabel='Custom Label' />,
+      <PaginationButton value={2} ariaLabel='Page two' />,
     );
-    const headingElement = screen.getByText('Aria Label Test');
+    const headingElement = screen.getByText('Page two');
     expect(headingElement).toHaveAttribute('aria-label', 'Custom Label');
   });
 
   test('uses title as aria-label when ariaLabel is not provided', () => {
-    render(<PaginationButton title='Default Aria Label' />);
+    render(<PaginationButton value={4} />);
     const headingElement = screen.getByText('Default Aria Label');
     expect(headingElement).toHaveAttribute('aria-label', 'Default Aria Label');
   });
